@@ -1,0 +1,24 @@
+{
+  "name": "react-native-spine",
+  "version": "0.0.1",
+  "description": "A template component for your react-native application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eowfenth/react-native-spine.git"
+  },
+  "keywords": [
+    "react-native",
+    "template",
+    "component"
+  ],
+  "author": "Nícolas 'nohaleh' Deçordi dos Reis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eowfenth/react-native-spine/issues"
+  },
+  "homepage": "https://github.com/eowfenth/react-native-spine#readme"
+}
