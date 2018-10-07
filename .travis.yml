@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - lts/*
+stages:
+  - lint
+  - test
+  - deploy
+jobs:
+  include:
+    - stage: lint
+      script:
+        - npm run lint
+    - stage: test
+      script:
+        - npm run test
+    - stage: deploy
+      script: echo "Publishing to npm..."
+      deploy:
+        provider: npm
+        email: eowfenth.services@gmail.com
+        api_key:
+          secure: T/aO/RSbYQoFtx+uOIZk3wCe/N/Dmw4PabO5rXCR+ndsEvInBq78LtfhJgxzgZMfMx3cevxdz40PbHn4ImGNGqQhMGmg1uI2qZXmnnu4QKYhANdjT/2rpsSPOLD/Qt2vGwYgkhtABj2qSoO91Z8QYXGHwadHUJz9Zf5wYfiGGhPQ18Yr/ZapKX6f89BXPeLSf2AQtJGvALVYNWKLwAlDaZvdma1J1Ez/n2lzTtFMQgh3Dg8tLJpOTqqbHbpmwoaNUJn5CdouaEmCQnvrlh62Qe6y5D0DFwbAlYXw2tKD5WrbTl1ufLvPV4qlBOnITPHYjHRKDOwARWlbtD+7IhL4OHHRXoJM6eSl6qqdiOvwBVGxPsVYFrZ0pXOxkuBKr5Kjnjp1vp6pmFg+fjyQWzrAz0Cq1sh/+fx2iJ82ceKqMIRWV0ltNyjBOd6KTVgUeeGmYILtiAlccZz+YOGqRFLpGTB3ApB3/lL9MHxYE200Q+d6A1JbFE7AwaZdOH8nOHntpHP07iAvjSgyIagjArRi6pip+PZrf58Jd5xMoNh5Ld0QCZy76UXm5lV3MKwHgPmM3wYynxmABEjgvtZFCDaaVPQSW2k7qENZ9Tk4WF57D8vmrCa9Nbwy6J45BdMP6cjUwi5zN10Cs5Fn5CtntnzzDMpjEnYL3cWQHZe+T78iz9M=
+        on:
+          branch: master
+        skip_cleanup: true
